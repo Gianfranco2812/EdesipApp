@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('telefono', 20)->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->foreignId('rol_id')->constrained('roles')->cascadeOnUpdate()->restrictOnDelete();
             $table->boolean('activo')->default(true);
             $table->timestamp('fecha_registro')->useCurrent();
             $table->timestamps();
